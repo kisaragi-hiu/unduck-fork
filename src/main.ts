@@ -7,7 +7,7 @@ function noSearchDefaultPageRender() {
     <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;">
       <div class="content-container">
         <h1>Kisaragi's Unduck fork</h1>
-        <p><a href="https://unduck.link" target="_blank">Unduck</a> with some personal customizations.<br/>Add the following URL as a custom search engine to the browser.<br/>Enables <a href="https://duckduckgo.com/bang.html" target="_blank">all of DuckDuckGo's bangs.</a></p>
+        <p><a href="https://unduck.link" target="_blank">Unduck</a> with some personal customizations.<br/>Add the following URL as a custom search engine to the browser, or right click on the address bar in Firefox and press the add button there.<br/>Enables <a href="https://duckduckgo.com/bang.html" target="_blank">all of DuckDuckGo's bangs.</a></p>
         <div class="url-container"> 
           <input 
             type="text" 
@@ -24,6 +24,7 @@ function noSearchDefaultPageRender() {
           <li>This page</li>
           <li>The URL</li>
           <li>DuckDuckGo as default bang</li>
+          <li>OpenSearch description to work around desktop Firefox's limitations</li>
         </ul>
       </div>
       <footer class="footer">
