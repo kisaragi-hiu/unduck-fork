@@ -2,6 +2,33 @@
 
 export const bangs = [
   {
+    c: "Online Services",
+    d: "duckduckgo.com",
+    r: 0,
+    s: "Duckduckgo Worldwide",
+    sc: "Search (DDG)",
+    t: "ddww",
+    u: "https://duckduckgo.com/?kl=wt-wt&q={{{s}}}",
+  },
+  {
+    c: "Online Services",
+    d: "duckduckgo.com",
+    r: 0,
+    s: "Duckduckgo Japan",
+    sc: "Search (DDG)",
+    t: "ddjp",
+    u: "https://duckduckgo.com/?kl=jp-jp&q={{{s}}}",
+  },
+  {
+    c: "Online Services",
+    d: "duckduckgo.com",
+    r: 0,
+    s: "Duckduckgo Taiwan",
+    sc: "Search (DDG)",
+    t: "ddtw",
+    u: "https://duckduckgo.com/?kl=tw-tzh&q={{{s}}}",
+  },
+  {
     c: "AI",
     d: "www.t3.chat",
     r: 0,
