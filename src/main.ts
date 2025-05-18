@@ -19,9 +19,11 @@ function noSearchDefaultPageRender() {
             <img src="/clipboard.svg" alt="Copy" />
           </button>
         </div>
-        <h2 style="margin-top: 8px;">Changes</h2>
+        <h2 style="margin-top: 16px;">Changes</h2>
         <ul style="list-style-type: none">
           <li>This page</li>
+          <li>The URL</li>
+          <li>DuckDuckGo as default bang</li>
         </ul>
       </div>
       <footer class="footer">
@@ -52,7 +54,7 @@ function noSearchDefaultPageRender() {
   });
 }
 
-const LS_DEFAULT_BANG = localStorage.getItem("default-bang") ?? "g";
+const LS_DEFAULT_BANG = localStorage.getItem("default-bang") ?? "ddg";
 const defaultBang = bangs.find((b) => b.t === LS_DEFAULT_BANG);
 
 function getBangredirectUrl() {
