@@ -1,6 +1,6 @@
 # Kisaragi's Unduck fork
 
-Instead of waiting for upstream maintainence (which we're not entitled to) I'm just going to fork it to customize it for myself.
+Instead of waiting for [upstream](https://unduck.link) maintainence (which we're not entitled to) I'm just going to fork it to customize it for myself.
 
 ## Setup
 
@@ -15,18 +15,11 @@ pnpm run dev
 pnpm run build
 ```
 
-Like upstream, this is a static build.
+Like upstream, this is a static build. This builds to `dist`.
 
-# Unduck
+## Changes
 
-DuckDuckGo's bang redirects are too slow. Add the following URL as a custom search engine to your browser. Enables all of DuckDuckGo's bangs to work, but much faster.
-
-```
-https://unduck.link?q=%s
-```
-
-## How is it that much faster?
-
-DuckDuckGo does their redirects server side. Their DNS is...not always great. Result is that it often takes ages.
-
-I solved this by doing all of the work client side. Once you've went to https://unduck.link once, the JS is all cache'd and will never need to be downloaded again. Your device does the redirects, not me.
+- The main page explains the fork
+- Duckduckgo as default default bang. I also haven't bothered building a UI for changing the default bang.
+- Provides an OpenSearch description so that desktop Firefox is actually willing to add the URL as a search engine
+- ddjp, ddtw, and ddww bangs

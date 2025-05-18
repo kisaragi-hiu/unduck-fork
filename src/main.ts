@@ -22,9 +22,9 @@ function noSearchDefaultPageRender() {
         <h2 style="margin-top: 16px;">Changes</h2>
         <ul style="list-style-type: none">
           <li>This page</li>
-          <li>The URL</li>
           <li>DuckDuckGo as default bang</li>
           <li>OpenSearch description to work around desktop Firefox's limitations</li>
+          <li>ddjp, ddtw, and ddww bangs (DuckDuckGo region settings)</li>
         </ul>
       </div>
       <footer class="footer">
