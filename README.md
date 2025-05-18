@@ -1,6 +1,8 @@
 # Kisaragi's Unduck fork
 
-Instead of waiting for [upstream](https://unduck.link) maintainence (which we're not entitled to) I'm just going to fork it to customize it for myself.
+[Unduck](https://unduck.link) is nice, but there are some changes I need to make it fit my needs. So here's a fork to implement them.
+
+Instead of waiting for [upstream](https://github.com/t3dotgg/unduck) to add features (which we're not entitled to) I'm just going to fork it to customize it for myself.
 
 ## Setup
 
