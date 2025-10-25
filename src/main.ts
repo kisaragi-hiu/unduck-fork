@@ -2,8 +2,10 @@ import { bangs } from "./bang";
 import "./global.css";
 
 function noSearchDefaultPageRender() {
+  const html = (strings: TemplateStringsArray, ...values: any[]) =>
+    String.raw({ raw: strings }, ...values);
   const app = document.querySelector<HTMLDivElement>("#app")!;
-  app.innerHTML = `
+  app.innerHTML = html`
     <div
       style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;"
     >
