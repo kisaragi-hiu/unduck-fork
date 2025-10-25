@@ -1,7 +1,9 @@
-dev:
+DEPS := public/search.ico vendor/bang.ts
+
+dev: $(DEPS)
 	npx vite
 
-build: public/search.ico vendor/bang.ts
+build: $(DEPS)
 	npx tsc && npx vite build
 
 preview: build

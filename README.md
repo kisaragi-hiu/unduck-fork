@@ -8,13 +8,15 @@ Instead of waiting for [upstream](https://github.com/t3dotgg/unduck) to add feat
 
 ```sh
 pnpm install
-pnpm run dev
+make dev
 ```
+
+I do some stuff at build time (particularly fetching bangs from DuckDuckGo) and want them to be explicitly done at build time, which is why I'm using Make.
 
 ## Build
 
 ```sh
-pnpm run build
+make build
 ```
 
 Like upstream, this is a static build. This builds to `dist`.
