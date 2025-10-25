@@ -4,16 +4,26 @@ import "./global.css";
 function noSearchDefaultPageRender() {
   const app = document.querySelector<HTMLDivElement>("#app")!;
   app.innerHTML = `
-    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;">
+    <div
+      style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;"
+    >
       <div class="content-container">
         <h1>Kisaragi's Unduck fork</h1>
-        <p><a href="https://unduck.link" target="_blank">Unduck</a> with some personal customizations. Add the following URL as a custom search engine to the browser, or right click on the address bar in Firefox and press the add button there. Enables <a href="https://duckduckgo.com/bang.html" target="_blank">all of DuckDuckGo's bangs.</a></p>
-        <div class="url-container"> 
-          <input 
-            type="text" 
+        <p>
+          <a href="https://unduck.link" target="_blank">Unduck</a> with some
+          personal customizations. Add the following URL as a custom search
+          engine to the browser, or right click on the address bar in Firefox
+          and press the add button there. Enables
+          <a href="https://duckduckgo.com/bang.html" target="_blank"
+            >all of DuckDuckGo's bangs.</a
+          >
+        </p>
+        <div class="url-container">
+          <input
+            type="text"
             class="url-input"
             value="https://unduck-fork.kisaragi-hiu.com?q=%s"
-            readonly 
+            readonly
           />
           <button class="copy-button">
             <img src="/clipboard.svg" alt="Copy" />
@@ -23,7 +33,9 @@ function noSearchDefaultPageRender() {
         <ul style="list-style-type: none">
           <li>This page</li>
           <li>DuckDuckGo as default bang</li>
-          <li>OpenSearch description to work around desktop Firefox's limitations</li>
+          <li>
+            OpenSearch description to work around desktop Firefox's limitations
+          </li>
           <li>ddjp, ddtw, and ddww bangs (DuckDuckGo region settings)</li>
         </ul>
       </div>
@@ -34,7 +46,9 @@ function noSearchDefaultPageRender() {
         •
         <a href="https://github.com/t3dotgg/unduck" target="_blank">github</a>
         •
-        <a href="https://github.com/kisaragi-hiu/unduck-fork" target="_blank">github (this fork)</a>
+        <a href="https://github.com/kisaragi-hiu/unduck-fork" target="_blank"
+          >github (this fork)</a
+        >
         •
         <a href="https://unduck.link" target="_blank">original</a>
       </footer>
