@@ -1,7 +1,12 @@
 import { bangs } from "./bang";
 import "./global.css";
 
+const getBang = (t: string) => bangs.find((b) => b.t === t);
+const LS_DEFAULT_BANG = localStorage.getItem("default-bang") ?? "ddg";
+const defaultBang = getBang(LS_DEFAULT_BANG);
+
 function noSearchDefaultPageRender() {
+  const url = `https://unduck-fork.kisaragi-hiu.com?q=%s`;
   const html = (strings: TemplateStringsArray, ...values: any[]) =>
     String.raw({ raw: strings }, ...values);
   const app = document.querySelector<HTMLDivElement>("#app")!;
@@ -18,10 +23,14 @@ function noSearchDefaultPageRender() {
             >all of DuckDuckGo's bangs.</a
           >
         </p>
+        <h2>Options</h2>
+        <fieldset id="defaultBang">
+          <legend>Search engine to use when unspecified:</legend>
+        </fieldset>
         <h2>Usage</h2>
         <p>Add the following URL as a custom search engine to the browser:</p>
         <div class="url-container">
-          <div class="url">https://unduck-fork.kisaragi-hiu.com?q=%s</div>
+          <div class="url">${url}</div>
           <button class="copy-button">
             <img src="/clipboard.svg" alt="Copy" />
           </button>
@@ -40,6 +49,7 @@ function noSearchDefaultPageRender() {
             New bangs: kagi; ddjp, ddtw, ddww (DuckDuckGo region settings)
           </li>
           <li>Bangs are fetched from DuckDuckGo during build</li>
+          <li>Option to switch between a few default bangs</li>
         </ul>
       </div>
       <footer class="footer">
@@ -57,13 +67,31 @@ function noSearchDefaultPageRender() {
       </footer>
     </div>
   `;
+  const defaultBangOption =
+    app.querySelector<HTMLFieldSetElement>("#defaultBang")!;
+  for (const t of ["ddg", "kagi", "g"]) {
+    const input = document.createElement("input");
+    if (t === defaultBang?.t) {
+      input.checked = true;
+    }
+    input.name = "defaultBang";
+    input.type = "radio";
+    input.value = t;
+    input.addEventListener("change", () => {
+      // This works because in JS each for loop iteration has its own scope
+      // This would not work in Python
+      localStorage.setItem("default-bang", t);
+    });
+    const label = document.createElement("label");
+    label.innerHTML = `${getBang(t)?.s} (${t})`;
+    label.prepend(input);
+    defaultBangOption.append(label);
+  }
 
   const copyButton = app.querySelector<HTMLButtonElement>(".copy-button")!;
   const copyIcon = copyButton.querySelector("img")!;
-  const urlInput = app.querySelector<HTMLInputElement>(".url-input")!;
-
   copyButton.addEventListener("click", async () => {
-    await navigator.clipboard.writeText(urlInput.value);
+    await navigator.clipboard.writeText(url);
     copyIcon.src = "/clipboard-check.svg";
 
     setTimeout(() => {
@@ -71,9 +99,6 @@ function noSearchDefaultPageRender() {
     }, 2000);
   });
 }
-
-const LS_DEFAULT_BANG = localStorage.getItem("default-bang") ?? "ddg";
-const defaultBang = bangs.find((b) => b.t === LS_DEFAULT_BANG);
 
 function getBangredirectUrl() {
   const url = new URL(window.location.href);

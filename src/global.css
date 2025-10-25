@@ -51,6 +51,31 @@ a:hover {
   color: #888888;
 }
 
+input[type="radio"] {
+  appearance: none;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #666;
+  position: relative;
+  top: 2px;
+}
+input[type="radio"]:checked {
+  background: #191919;
+}
+fieldset {
+  border: none;
+}
+fieldset legend {
+  margin: 0 auto;
+}
+fieldset label {
+  padding: 2px 0;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
 button {
   font: inherit;
   border: none;
@@ -169,6 +194,13 @@ textarea {
 
   .footer a:hover {
     color: #ccc;
+  }
+
+  input[type="radio"] {
+    border-color: #999;
+  }
+  input[type="radio"]:checked {
+    background: #fff;
   }
 
   .url {
