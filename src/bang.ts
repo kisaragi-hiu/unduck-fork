@@ -20,6 +20,15 @@ interface Service {
 const extra: Service[] = [
   {
     c: "Online Services",
+    d: "kagi.com",
+    r: 0,
+    s: "Kagi",
+    sc: "Search (Kagi)",
+    t: "kagi",
+    u: "https://kagi.com/search?q={{{s}}}",
+  },
+  {
+    c: "Online Services",
     d: "duckduckgo.com",
     r: 0,
     s: "Duckduckgo Worldwide",
