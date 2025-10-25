@@ -1,4 +1,4 @@
-import original from "../vendor/bang.json" with { type: "json" };
+import { original } from "../vendor/bang.ts";
 
 interface Service {
   /** Category 1 */
