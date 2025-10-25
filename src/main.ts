@@ -11,32 +11,33 @@ function noSearchDefaultPageRender() {
         <h1>Kisaragi's Unduck fork</h1>
         <p>
           <a href="https://unduck.link" target="_blank">Unduck</a> with some
-          personal customizations. Add the following URL as a custom search
-          engine to the browser, or right click on the address bar in Firefox
-          and press the add button there. Enables
+          personal customizations. Supports
           <a href="https://duckduckgo.com/bang.html" target="_blank"
             >all of DuckDuckGo's bangs.</a
           >
         </p>
+        <h2>Usage</h2>
+        <p>Add the following URL as a custom search engine to the browser:</p>
         <div class="url-container">
-          <input
-            type="text"
-            class="url-input"
-            value="https://unduck-fork.kisaragi-hiu.com?q=%s"
-            readonly
-          />
+          <div class="url">https://unduck-fork.kisaragi-hiu.com?q=%s</div>
           <button class="copy-button">
             <img src="/clipboard.svg" alt="Copy" />
           </button>
         </div>
-        <h2 style="margin-top: 16px;">Changes</h2>
-        <ul style="list-style-type: none">
-          <li>This page</li>
+        <p>
+          In Firefox, right click on the address bar and press the add button
+          there.
+        </p>
+        <h2>Changes</h2>
+        <ul>
           <li>DuckDuckGo as default bang</li>
           <li>
             OpenSearch description to work around desktop Firefox's limitations
           </li>
-          <li>ddjp, ddtw, and ddww bangs (DuckDuckGo region settings)</li>
+          <li>
+            New bangs: kagi; ddjp, ddtw, ddww (DuckDuckGo region settings)
+          </li>
+          <li>Bangs are fetched from DuckDuckGo during build</li>
         </ul>
       </div>
       <footer class="footer">
