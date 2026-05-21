@@ -45,9 +45,7 @@ function noSearchDefaultPageRender() {
           <li>
             OpenSearch description to work around desktop Firefox's limitations
           </li>
-          <li>
-            New bangs: kagi; ddjp, ddtw, ddww (DuckDuckGo region settings)
-          </li>
+          <li>Custom bangs for myself (see below)</li>
           <li>Bangs are fetched from DuckDuckGo during build</li>
           <li>Option to switch between a few default bangs</li>
         </ul>
@@ -57,7 +55,7 @@ function noSearchDefaultPageRender() {
             const result = [];
             for (const bang of extra) {
               result.push(
-                `<li class="custom-bang">${bang.t} - ${bang.sc}<br>${bang.u}</li>`,
+                `<li class="custom-bang">${bang.t} - ${bang.s}<br>${bang.u}</li>`,
               );
             }
             return result.join("\n");
