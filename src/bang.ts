@@ -17,7 +17,7 @@ interface Service {
   u: string;
 }
 
-const extra: Service[] = [
+export const extra: Service[] = [
   {
     c: "Online Services",
     d: "kagi.com",

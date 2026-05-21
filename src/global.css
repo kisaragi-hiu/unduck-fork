@@ -149,9 +149,14 @@ textarea {
   background: #28a745;
 }
 
+.custom-bang {
+  text-align: left;
+  margin: 0.5rem 1rem;
+}
+
 /* Add footer styles */
 .footer {
-  position: fixed;
+  /* position: fixed; */
   bottom: 16px;
   left: 0;
   right: 0;

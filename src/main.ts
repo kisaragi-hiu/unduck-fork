@@ -1,4 +1,4 @@
-import { bangs } from "./bang";
+import { bangs, extra } from "./bang";
 import "./global.css";
 
 const getBang = (t: string) => bangs.find((b) => b.t === t);
@@ -50,6 +50,18 @@ function noSearchDefaultPageRender() {
           </li>
           <li>Bangs are fetched from DuckDuckGo during build</li>
           <li>Option to switch between a few default bangs</li>
+        </ul>
+        <h2>My custom bangs</h2>
+        <ul>
+          ${(() => {
+            const result = [];
+            for (const bang of extra) {
+              result.push(
+                `<li class="custom-bang">${bang.t} - ${bang.sc}<br>${bang.u}</li>`,
+              );
+            }
+            return result.join("\n");
+          })()}
         </ul>
       </div>
       <footer class="footer">
