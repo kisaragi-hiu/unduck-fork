@@ -19,6 +19,15 @@ interface Service {
 
 export const extra: Service[] = [
   {
+    c: "Research",
+    d: "kemdict.com",
+    r: 0,
+    s: "Kemdict",
+    sc: "Kemdict",
+    t: "kemdict",
+    u: "https://kemdict.com/search?q={{{s}}}",
+  },
+  {
     c: "Online Services",
     d: "kagi.com",
     r: 0,
