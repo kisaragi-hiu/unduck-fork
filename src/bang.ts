@@ -59,6 +59,14 @@ export const extra: Service[] = [
     u: "https://duckduckgo.com/?kl=tw-tzh&q={{{s}}}",
   },
   {
+    c: "Tech",
+    d: "npmx",
+    s: "npmx",
+    sc: "Programming",
+    t: "npmx",
+    u: "https://www.npmx.dev/search?q={{{s}}}",
+  },
+  {
     c: "AI",
     d: "www.t3.chat",
     s: "T3 Chat",
